@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block pagetitle %}
+Contact Us
+{% endblock pagetitle %}
+
+{% block body %}
+
+<div class="row mb-5 text-center text-white laptop">
+    <div class="col-lg-10 mx-auto">
+        <h1 class="display-4" style="padding-top: 2%;font-weight: 400;color: rgb(4, 54, 4);"><b>📞Contact-Us📞</b></h1>
+        <p class="lead" style="font-weight: 500;color: black;">For Any Queries & Suggestions Contact Us. We Are Happy To
+            Help.</p>
+    </div>
+</div>
+
+<div class="row p-3">
+    <div class="col">
+        <div class=" p-5 bg-white shadow rounded-lg" style="height: 95%;">
+            <center>
+                <h3>Divya Reddy</h3>
+                <p class="lead" style="font-weight: 350;">Hi, I am Divya Reddy. Currently Pursuing Masters inCoputer Science. 
+                    My Main Focus is on Machine Learning, Deep Learning and Artificial Intelligence. And you can mail us any query regarding the application to: kotadivyacharan@gmail.com</p>
+            </center>
+        </div>
+    </div>
+
+<div>
+<center>
+    <h2>Review Form</h2>
+    <form action="/submit222" method="post">
+        <label for="textfield">Enter your text here:</label><br>
+        <br>
+        <input type="text" id="textfield" name="textfield" style="width: 30ch;height: 5ch;">
+        <br><br>
+        <input type="submit" value="Submit">
+        <br><br>
+    </form>
+</center>
+
+
+</div>
+
+{% endblock body %}

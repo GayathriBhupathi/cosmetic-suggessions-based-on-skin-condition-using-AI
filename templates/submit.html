@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+{% block pagetitle %}
+{{title}}
+{% endblock pagetitle %}
+{% block body %}
+
+<div>
+  <div class="container">
+    <!-- For demo purpose -->
+    <div class="row mb-5 text-center text-white">
+      <div class="col-lg-10 mx-auto">
+        <h1 class="display-4" style="padding-top: 2%;font-weight: 400;color: rgb(4, 54, 4);""><b>{{title}}</b></h1>
+      </div>
+    </div>
+    <!-- <center>
+    <div class=" col">
+          <div class="p-3 bg-white shadow rounded-lg" style="width: 30%;">
+
+            <img src={{image_url}} width="350" height="350">
+
+          </div>
+      </div>
+      </center> -->
+      <center>
+      <br>
+      <div class=" row ">
+        <div class="col mx-auto">
+          <div class="p-5 bg-white shadow rounded-lg" style="height: 95%;">
+            <h1>Predicted Skin Type:</h1>
+            <h3><p5>{{pred}}</p5></h3>
+          </div>
+        </div>
+      </div>
+    </center>
+      <!-- <div class="row">
+        <div class="col mx-auto">
+          <div class="p-5 bg-white shadow rounded-lg" style="height:95%">
+            
+            <p>
+              {{recommendations}}
+            </p>
+          </div>
+        </div>
+    </div> -->
+
+
+    
+    <div class="col mx-auto"">
+        <div class=" p-5 bg-white shadow rounded-lg" style="height: 95%;">
+          <center>
+          <h1>  SUGGESTION :  </h1>
+              {%if pred == "Normal Skin"%}
+              <h3>For normal skin, you're lucky to have a well-balanced complexion. Your primary goal is to maintain your skin's health. Here's a comprehensive skincare routine:</h3>  
+              <h3> 1. Cleanser: Use a gentle, sulfate-free cleanser to remove impurities.</h3>  
+              <h3> 2. Moisturizer: Opt for a lightweight, non-comedogenic moisturizer.</h3>  
+              <h3> 3. Sunscreen: Apply a broad-spectrum sunscreen daily to protect your skin.</h3>  
+              <h3> 4. Optional: You can incorporate a mild exfoliant 1-2 times a week for extra glow.</h3>  
+                
+                  <a target="_blank" href=https://www.purplle.com/collections/best-daily-face-cream-for-normal-skin>
+                    <button type="button" class="btn btn-success" style="background-color: #0a240d;">Buy Product online </button></a>
+                    
+              
+              {%elif pred == "Sensitive Skin"%}
+      
+              <h3>Sensitive skin requires extra care to minimize irritation and redness. Consider these steps:</h3>
+                <h3> 1. Cleanser: Use a fragrance-free, hypoallergenic cleanser.</h3>
+                  <h3> 2. Moisturizer: Choose a product with soothing ingredients like aloe vera or chamomile.</h3>
+                    <h3> 3. Sunscreen: Use a physical sunscreen with zinc oxide or titanium dioxide.</h3>
+                      <h3> 4. Avoid harsh exfoliants and strong active ingredients, and patch-test new products.</h3>
+                  
+                  <a target="_blank" href=https://www.esteelauder.in/product/1216/71123/landing-pages/sun-sunless/daywear/anti-oxidant-72h-hydration-sorbet-creme-spf-15?gad=1&gclid=CjwKCAjwysipBhBXEiwApJOcu7nke1gyhHyaGhQAlQNJN79Jcahj8xgACvxHPg_H2eEyMgJad3XxhRoC-skQAvD_BwE>
+                    <button type="button" class="btn btn-success" style="background-color: #0a240d;">Buy Product</button></a>
+                 
+
+              {% elif pred == "Dry Skin"%}
+              <h3>Dry skin needs intense hydration and protection. Follow this regimen:</h3>
+                <h3>    1. Cleanser: Use a hydrating, gentle cleanser.</h3>
+                  <h3>    2. Moisturizer: Opt for a rich, creamy moisturizer with ingredients like hyaluronic acid or ceramides.</h3>
+                    <h3>    3. Sunscreen: Apply a broad-spectrum sunscreen daily to prevent further dryness.</h3>
+                      <h3>    4. Consider adding a hydrating serum or facial oil to your routine for added moisture.</h3>
+              
+                  <a target="_blank" href=https://letshyphen.com/products/daily-dry-skin-care-bundle-for-dry-to-normal-skin?variant=46675595985212&currency=INR&utm_source=google&utm_medium=cpc&utm_campaign=SK_PMax_With_Feed_Catch_All_4Aug%2723&gclid=EAIaIQobChMI4Z7O156EggMVF6RmAh2G-gr_EAQYEiABEgIRFPD_BwE>
+                    <button type="button" class="btn btn-success" style="background-color: #0a240d;">Buy Product</button></a>
+                
+
+              {%elif pred == "Oily Skin"%}
+              <h3>To control excess oil and minimize breakouts, follow these steps:</h3>
+              <h3> 1. Cleanser: Use a foaming, salicylic acid-based cleanser to control oil.</h3>
+              <h3> 2. Moisturizer: Choose an oil-free, lightweight, and non-comedogenic moisturizer.</h3>
+              <h3> 3. Sunscreen: Use an oil-free, mattifying sunscreen.</h3>
+              <h3> 4. Consider using products with ingredients like salicylic acid, niacinamide, or witch hazel to manage oil and acne.</h3>
+              <a target="_blank" href=https://letshyphen.com/products/barrier-care-cream-oily-skin?variant=44892592308540&currency=INR&utm_source=google&utm_medium=cpc&utm_campaign=SK_PMax_With_Feed_Catch_All_4Aug%2723&gclid=EAIaIQobChMIrLODsZ6EggMVCnN9Ch209wvVEAQYAiABEgIypvD_BwE>
+                <button type="button" class="btn btn-success" style="background-color: #0a240d;">Buy Product</button></a>
+                  
+              
+              {%elif pred == "Scaly Skin"%}
+              <h3>Scaly skin often results from dryness and flakiness. Try these skincare steps:</h3>
+                <h3>   1. Cleanser: Use a gentle exfoliating cleanser to remove dead skin cells.</h3>
+                  <h3>  2. Moisturizer: Choose a rich, emollient moisturizer to lock in moisture.</h3>
+                  <h3>   3. Sunscreen: Protect your skin from further damage with a daily sunscreen.</h3>
+                    <h3> 4. Exfoliate with products containing glycolic acid or lactic acid to improve texture.</h3>
+              
+                  <a target="_blank" href=https://www.google.com/url?url=https://www.1mg.com/otc/efaderm-cream-for-dry-scaly-skin-atopy-hyperkeratosis-eczema-otc58941%3Fsrsltid%3DAfmBOooC0_rs07OiU5kReT4vL8b31H0Hr4SpKH_s_NC_x3q2OlHP_H2KNJs&rct=j&q=&esrc=s&opi=95576897&sa=U&ved=0ahUKEwjjx63jnYSCAxXYb2wGHeiNDUEQ1SkIwQwoAA&usg=AOvVaw2Vnb37nfX9A7MUlqxiTsrA>
+                    <button type="button" class="btn btn-success" style="background-color: #0a240d;">Buy Product</button></a>    
+                  
+              
+              {%elif pred == "Red_Spots_skin"%}
+              <h3>Red spots can be due to various causes. Here's a general approach:</h3>
+                <h3>    1. Cleanser: Use a gentle, fragrance-free cleanser to avoid irritation.</h3>
+                  <h3>   2. Moisturizer: Select a calming and hydrating moisturizer.</h3>
+                  <h3>   3. Sunscreen: Shield your skin from further damage with a broad-spectrum sunscreen.</h3>
+                  <h3>   4. Consult a dermatologist to identify the specific cause of redness and receive tailored treatment.</h3>
+          
+                  
+                  <a target="_blank" href=https://www.ayushvedham.com/shop/skin-care/hydrater/?gclid=EAIaIQobChMIyc3ij56EggMVMKRmAh1fHA3YEAQYASABEgJOpvD_BwE>
+                    <button type="button" class="btn btn-success" style="background-color: #0a240d;">Buy Product</button></a>    
+                  
+             {%elif pred == "Skin_moles"%}
+                  <h3>Moles are usually harmless but require care. Follow these guidelines:</h3>
+                    <h3>  1. Sunscreen: Protect your skin with a broad-spectrum sunscreen to prevent sun damage.</h3>
+                      <h3> 2. Regularly examine your moles for any changes in size, shape, or color.</h3>
+                          <h3> 3. If you notice changes in a mole, consult a dermatologist for a thorough evaluation.</h3>
+                            <h3> 4. Avoid sun exposure, and consider wearing protective clothing and hats.</h3>    
+      
+
+                      
+                  <a target="_blank" href=https://82e.com/products/ashwagandha-bounce-hydrating-moisturiser?variant=42966193504505&currency=INR&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&utm_source=google&utm_medium=cpc&utm_campaign=pmax_allproducts_listing-20312106453&gad=1&gclid=EAIaIQobChMI88Ke9ZuEggMVe6JmAh3ZcQi2EAQYAyABEgL8P_D_BwE>
+                  <button type="button" class="btn btn-success" style="background-color: #0a240d;">Buy Product</button></a>    
+                  
+
+              {%else%}
+              <h3>Please enter a valid skin type.</h3>    
+          <br>
+              {%endif%}
+              <a href='/'>go back to home page</a>
+            </center>
+        </div>
+      </div>
+
+
+  </div>
+</div>
+
+
+<div>
+  <center>
+      <h2>Review Form</h2>
+      <form action="/submit222" method="post">
+          <label for="textfield">Enter your text here:</label><br>
+          <br>
+          <input type="text" id="textfield" name="textfield" style="width: 30ch;height: 5ch;">
+          <br><br>
+          <input type="submit" value="Submit">
+          <br><br>
+      </form>
+  </center>
+</div>
+  
+
+
+{% endblock body %}

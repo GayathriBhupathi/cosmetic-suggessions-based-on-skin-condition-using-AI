@@ -1,0 +1,86 @@
+<html>
+{% extends 'base.html' %}
+{% block pagetitle %}
+AI Engine
+{% endblock pagetitle %}
+
+{% block body %}
+<div>
+    <div class="container">
+        <!-- For demo purpose -->
+        <div class="row mb-5 text-center text-white">
+            <div class="col-lg-10 mx-auto">
+                <h1 class="display-4" style="padding-top: 2%;font-weight: 400;color: rgb(4, 54, 4);"><b>🍀AI Engine🍀</b></h1>
+                <p class="lead" style="font-weight: 500;color: black;">This App Will Help You For The Skin</p>
+            </div>
+        </div>
+        <!-- End -->
+        <div class="row ">
+            <div class="col mx-auto">
+                <div class="p-5 bg-white shadow rounded-lg" style="height: 95%;">
+
+                    <h5><b>Why is it necessary to detect types in skin ?</b></h5>
+                    <p>The human skin type variety provides a diverse habitat for microorganisms and bacteria.
+                        Sometimes abnormalities of skin also cause noticeable signs of underlying disease.
+                        Hence it is highly necessary to detect and properly diagnose skin disease in the early stages to avoid spread of the disease.
+                    </p>
+                </div>
+            </div>
+            <div class="col mx-auto">
+                <div class="p-5 bg-white shadow rounded-lg" style="height: 95%;"><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnhlr-5G9eC-eleQ33e3wYPGTPOWiwBouWT_mi5I1h0MAbCBlGi1ML4PGmkQKweo1ApyE&usqp=CAU "
+                        height="300" alt="" width="200" class="d-block mx-auto mb-4 rounded-pill">
+
+                    <form action="/submit" method="POST" enctype="multipart/form-data">
+                        <div class="custom-file overflow-hidden mb-4">
+                            <input type="file" id="actual-btn" hidden name="image" />
+                            <label for="actual-btn">Choose File</label>
+                            <span id="file-chosen">No file chosen</span>
+                        </div>
+
+                        <!-- End -->
+
+                        <h6 class="text-center mb-4 text-muted">
+                            Simply upload your Skin image and then see the magic of AI.
+                        </h6>
+
+                        <!-- Custom bootstrap upload file-->
+                        <center>
+                            <a class="mx-2"><button type="submit" class="btn btn-outline-success">Submit</button></a>
+                        </center>
+                    </form>
+                    <!-- End -->
+
+                </div>
+            </div>
+            <div class="col mx-auto">
+                <div class="p-5 bg-white shadow rounded-lg" style="height: 95%;">
+                    <h5><b>Prevent Skin Disease follow below steps:</b></h5>
+                    <ol>
+                        <li>Eat a healthy diet. A healthy diet can help you look and feel your best</li>
+                        <li>Limit bath time. Hot water and long showers or baths remove oils from your skin.</li>
+                        <li>Avoid strong soaps. Strong soaps and detergents can strip oil from your skin.</li>
+                        <li>Moisturize dry skin</li>
+                        <li>Block sun damage. Avoid intense sun exposure, use sunscreen, and wear protective clothing.</li>
+                        <li>Don't use tanning beds or sunlamps. They emit the same harmful UV radiation as the sun.</li>
+                        <li>In the morning, cleanse your skin to start the day then put on a moisturizing sunscreen. At night, cleanse your skin again to remove any residual makeup and sweat from the day then finish with a moisturizer.</li>
+                    </ol>
+                    <a target="_blank" href="https://www.mayoclinic.org/healthy-lifestyle/adult-health/in-depth/skin-care/art-20048237"
+                        class="mx-2"><button type="button" class="btn btn-outline-success">More info</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const actualBtn = document.getElementById('actual-btn');
+
+    const fileChosen = document.getElementById('file-chosen');
+
+    actualBtn.addEventListener('change', function () {
+        fileChosen.textContent = this.files[0].name
+    })
+</script>
+
+{% endblock body %}

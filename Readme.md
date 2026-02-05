@@ -16,3 +16,20 @@
 # ⭐Requirements 
 #### You have to Installed all the requirments. Save all the below requirements in requirements.txt
 #### Run this line in cmd/shell :  pip install -r requirements.txt
+## Website Preview
+
+### Home Page
+![Home Page](screenshots/homepage.png)
+
+### Upload Page
+![imageupload](screenshots/imageupload.png)
+
+## Prediction page
+![Prediction](screenshots/prediction.png)
+
+### Result Page
+![Result](screenshots/Result.png)
+
+##**Suggesion page/website**
+![suggession](screenshots/suggessionpage.png)
+

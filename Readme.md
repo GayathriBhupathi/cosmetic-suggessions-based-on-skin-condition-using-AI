@@ -25,7 +25,7 @@
 ![imageupload](imageupload.png)
 
 ## Prediction page
-![Prediction](prediction.png)
+![Prediction](predictionpage.png)
 
 ### Result Page
 ![Result](Resultpage.png)

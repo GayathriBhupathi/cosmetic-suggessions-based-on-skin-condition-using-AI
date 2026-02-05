@@ -19,17 +19,17 @@
 ## Website Preview
 
 ### Home Page
-C:\Users\Admin\Desktop\MINI PROJECT\cosmetic-suggessions-based-on-skin-condition-using-AI\Screenshots
+![Home Page](Homepage.png)
 
 ### Upload Page
-![imageupload](screenshots/imageupload.png)
+![imageupload](imageupload.png)
 
 ## Prediction page
-![Prediction](screenshots/prediction.png)
+![Prediction](prediction.png)
 
 ### Result Page
-![Result](screenshots/Result.png)
+![Result](Resultpage.png)
 
 ##**Suggesion page/website**
-![suggession](screenshots/suggessionpage.png)
+![suggession](suggessionpage.png)
 
